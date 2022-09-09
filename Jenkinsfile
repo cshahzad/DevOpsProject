@@ -1,7 +1,7 @@
 pipeline {
   agent any
   stages {
-    stage('error') {
+    stage('ubuntu') {
       agent {
         node {
           label 'ubuntu'
@@ -14,6 +14,12 @@ pipeline {
     }
 
     stage('win') {
+      agent {
+        node {
+          label 'windows'
+        }
+
+      }
       steps {
         bat 'systeminfo'
       }
