@@ -13,5 +13,11 @@ pipeline {
       }
     }
 
+    stage('win') {
+      steps {
+        bat 'systeminfo'
+      }
+    }
+
   }
 }
